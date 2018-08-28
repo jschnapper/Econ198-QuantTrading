@@ -1,0 +1,153 @@
+/******************/
+/**** DEFAULTS ****/
+/******************/
+:root {
+  --primary: #8DA7BE;
+  --primary-light: #C0CFDB;
+  --primary-lighter: #DFE7ED;
+  --header-color: #4D5C68;
+}
+
+
+body {
+  background-color: #FCFAFA;
+  color: #0A0908;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.1em;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  border-bottom: 2px dotted var(--primary-lighter);
+  font-family: 'Playfair Display', serif;
+  font-size: 2em;
+  margin: 8px 0;
+  padding: 4px 0;
+}
+
+h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2em;
+  margin: 0;
+}
+
+
+header,
+section {
+  padding: 20px;
+}
+
+/*********************/
+/**** TABLE STYLE ****/
+/*********************/
+
+
+.th-week {
+  text-align: center;
+  width: 3em;
+}
+.th-date {
+  text-align: center;
+  width: 6em;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: var(--primary-light);
+  transition: 0.2s;
+}
+tbody tr:nth-child(even) {
+  background-color: var(--primary-lighter);
+  transition: 0.2s;
+}
+
+td {
+  padding: 8px;
+  border: 2px solid #FCFAFA;
+}
+
+
+/*********************/
+/**** PAGE STYLES ****/
+/*********************/
+.content-wr {
+  max-width: 80em;
+  width: 80%;
+}
+
+.description {
+  line-height: 1.25;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-hr {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+}
+
+.nav-items {
+  display: flex;
+}
+
+.nav-items .__item {
+  cursor: pointer;
+  margin-left: 8px;
+  padding: 12px 8px;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  -moz-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.nav-items .__item:hover {
+  background-color: #FCFAFA;
+  color: var(--primary);
+}
+
+.nav-wr {
+  align-items: center;
+  background-color: var(--primary);
+  color: #FCFAFA;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.page-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+
+.schedule-table {
+  border-collapse: collapse;
+  margin: 1em 0;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.section-hr {
+  color: var(--header-color);
+}
+
+.sub-header {
+  color: var(--primary-light);
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sub-header .sub-item {
+  margin-right: 32px;
+  margin: none;
+  padding: none;
+
+}
