@@ -43,13 +43,19 @@ section {
 /*********************/
 
 
-.th-week {
+.th-week,
+.td-week {
   text-align: center;
   width: 3em;
 }
-.th-date {
+.th-date,
+.td-date {
   text-align: center;
   width: 6em;
+}
+
+table {
+  cursor: default;
 }
 
 tbody tr:nth-child(odd) {
@@ -66,10 +72,27 @@ td {
   border: 2px solid #FCFAFA;
 }
 
+tbody tr:hover {
+  opacity: 0.8;
+}
+
+.schedule-container {
+  border: 1px solid transparent;
+  transition: 0.2s;
+  width: 100%;
+}
+
+.schedule-table {
+  border-collapse: collapse;
+  margin: 1em 0;
+  padding: 10px 0;
+  width: 100%;
+}
 
 /*********************/
 /**** PAGE STYLES ****/
 /*********************/
+
 .content-wr {
   max-width: 80em;
   width: 80%;
@@ -84,27 +107,35 @@ td {
   justify-content: space-between;
 }
 
-.nav-hr {
+.nav-hr-link,
+.nav-hr-link:visited {
   align-items: center;
+  color: inherit;
   cursor: pointer;
   display: flex;
+  text-decoration: none;
 }
 
 .nav-items {
   display: flex;
 }
 
-.nav-items .__item {
+.nav-link,
+.nav-link:visited {
+  color: inherit;
   cursor: pointer;
+  display: flex;
+  align-items: center;
   margin-left: 8px;
   padding: 12px 8px;
+  text-decoration: none;
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   -moz-transition: 0.2s;
   transition: 0.2s;
 }
 
-.nav-items .__item:hover {
+.nav-link:not(.active):hover  {
   background-color: #FCFAFA;
   color: var(--primary);
 }
@@ -112,6 +143,7 @@ td {
 .nav-wr {
   align-items: center;
   background-color: var(--primary);
+  box-shadow: 1px 2px 8px rgba(0,0,0,0.2);
   color: #FCFAFA;
   display: flex;
   justify-content: center;
@@ -122,32 +154,41 @@ td {
   align-items: center;
   display: flex;
   flex-direction: column;
+  margin-bottom: 40px;
   position: relative;
   width: 100%;
 }
 
-.schedule-table {
-  border-collapse: collapse;
-  margin: 1em 0;
-  padding: 10px 0;
-  width: 100%;
-}
+
 
 .section-hr {
   color: var(--header-color);
 }
 
 .sub-header {
-  color: var(--primary-light);
+  color: var(--primary);
   display: flex;
   list-style: none;
-  margin: 0;
+  margin: 4px 0;
   padding: 0;
 }
 
 .sub-header .sub-item {
   margin-right: 32px;
-  margin: none;
-  padding: none;
+}
+
+@media (max-width: 875px) {
+  .schedule-container {
+    border: 2px solid var(--primary-lighter);
+    border-radius: 4px;
+    margin-top: 1em;
+    overflow-y: hidden;
+    overflow-x: visible;
+    padding: 0px 4px;
+  }
+
+  .schedule-table {
+    min-width: 700px;
+  }
 
 }
