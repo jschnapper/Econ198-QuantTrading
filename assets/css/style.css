@@ -6,12 +6,14 @@
   --primary-light: #C0CFDB;
   --primary-lighter: #DFE7ED;
   --header-color: #4D5C68;
+  --black: #0A0908;
+  --white: #FCFAFA;
 }
 
 
 body {
-  background-color: #FCFAFA;
-  color: #0A0908;
+  background-color: var(--white);
+  color: var(--black);
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.1em;
   margin: 0;
@@ -72,11 +74,7 @@ tbody tr:nth-child(even) {
 
 td {
   padding: 8px;
-  border: 2px solid #FCFAFA;
-}
-
-tbody tr:hover {
-  opacity: 0.8;
+  border: 2px solid var(--white);
 }
 
 .schedule-container {
@@ -96,6 +94,26 @@ tbody tr:hover {
 /**** PAGE STYLES ****/
 /*********************/
 
+.assignment-item,
+.assignment-item:visited  {
+  color: var(--black);
+  cursor: pointer;
+  opacity: 0.8;
+  text-decoration: underline;
+  white-space: nowrap;
+}
+
+.assignment-item:hover {
+  opacity: 0.4;
+}
+
+.assignment-wr {
+  border: 2px solid var(--primary);
+  border-radius: 12px;
+  margin: 4px 0;
+  padding: 2px 8px;
+}
+
 .content-wr {
   max-width: 80em;
   width: 80%;
@@ -103,6 +121,11 @@ tbody tr:hover {
 
 .content {
   line-height: 1.25;
+}
+
+.due {
+  display: inline-block;
+  padding-left: 8px;
 }
 
 .nav-content {
@@ -117,6 +140,10 @@ tbody tr:hover {
   cursor: pointer;
   display: flex;
   text-decoration: none;
+}
+
+.nav-hr-link:hover {
+  color: var(--primary-lighter);
 }
 
 .nav-items {
@@ -139,7 +166,7 @@ tbody tr:hover {
 }
 
 .nav-link:not(.active):hover  {
-  background-color: #FCFAFA;
+  background-color: var(--white);
   color: var(--primary);
 }
 
@@ -147,10 +174,16 @@ tbody tr:hover {
   align-items: center;
   background-color: var(--primary);
   box-shadow: 1px 2px 8px rgba(0,0,0,0.2);
-  color: #FCFAFA;
+  color: var(--white);
   display: flex;
   justify-content: center;
   width: 100%;
+}
+
+.no-list-style {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .page-container {
@@ -162,7 +195,17 @@ tbody tr:hover {
   width: 100%;
 }
 
+.resource-item,
+.resource-item:visited {
+  color: var(--primary);
+  cursor: pointer;
+  text-decoration: none;
+}
 
+.resource-item:hover {
+  color: var(--primary-light);
+  text-decoration: underline;
+}
 
 .section-hr {
   color: var(--header-color);
