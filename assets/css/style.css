@@ -17,6 +17,7 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.1em;
   margin: 0;
+  min-width: 240px;
   padding: 0;
 }
 
@@ -110,6 +111,7 @@ td {
 .assignment-wr {
   border: 2px solid var(--primary);
   border-radius: 12px;
+  display: inline-block;
   margin: 4px 0;
   padding: 2px 8px;
 }
@@ -123,9 +125,32 @@ td {
   line-height: 1.25;
 }
 
+.dropdown-container {
+  display: none;
+  position: absolute;
+}
+
 .due {
   display: inline-block;
   padding-left: 8px;
+}
+
+.menu-container {
+  cursor: pointer;
+  display: none;
+  margin: 8px 0;
+}
+
+.menu-container:hover {
+  opacity: 0.7;
+}
+
+.menu-container .bar {
+  background-color: var(--white);
+  border-radius: 4px;
+  margin: 4px 0;
+  height: 4px;
+  width: 32px;
 }
 
 .nav-content {
@@ -235,6 +260,16 @@ td {
 
   .schedule-table {
     min-width: 700px;
+  }
+
+}
+
+@media (max-width: 700px) {
+  .menu-container {
+    display: block;
+  }
+  .nav-items {
+    display: none;
   }
 
 }
