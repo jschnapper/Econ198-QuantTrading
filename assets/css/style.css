@@ -33,9 +33,12 @@ h3 {
 }
 
 
-header,
+header {
+  margin: 20px;
+}
+
 section {
-  padding: 20px;
+  margin-bottom: 20px;
 }
 
 /*********************/
@@ -98,7 +101,7 @@ tbody tr:hover {
   width: 80%;
 }
 
-.description {
+.content {
   line-height: 1.25;
 }
 
