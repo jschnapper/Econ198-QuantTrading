@@ -142,17 +142,10 @@ td {
   background-color: var(--primary);
   box-shadow: 2px 4px 8px rgba(0,0,0,0.2);
   display: none;
-  height: 0;
   overflow: hidden;
   position: absolute;;
-  transition: 0.5s;
   width: 100%;
   z-index: 4;
-}
-
-.open.dropdown-container {
-  display: block;
-  height: auto;
 }
 
 .due {
@@ -221,8 +214,6 @@ td {
 .nav-link:visited {
   color: var(--white);
   cursor: pointer;
-  display: flex;
-  align-items: center;
   text-decoration: none;
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
@@ -231,12 +222,16 @@ td {
 }
 
 .nav-def {
+  align-items: center;
+  display: flex;
   margin-left: 8px;
   padding: 12px 8px;
 }
 
 .nav-drop {
+  display: block;
   padding: 12px 0;
+  text-align: center;
 }
 
 .nav-link:not(.active):hover  {
