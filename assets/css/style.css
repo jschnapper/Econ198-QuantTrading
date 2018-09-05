@@ -2,35 +2,34 @@
 /**** DEFAULTS ****/
 /******************/
 :root {
-  --primary: #8DA7BE;
-  --primary-light: #C0CFDB;
-  --primary-lighter: #DFE7ED;
-  --header-color: #4D5C68;
-  --black: #0A0908;
+  --light: #F2EFEF;
+  --black: #544B4F;
   --white: #FCFAFA;
+  --border: #98989B;
 }
 
 
 body {
   background-color: var(--white);
   color: var(--black);
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   font-size: 1.1em;
+  font-weight: 300;
   margin: 0;
   min-width: 240px;
   padding: 0;
 }
 
 h1 {
-  border-bottom: 2px dotted var(--primary-lighter);
-  font-family: 'Playfair Display', serif;
+  border-bottom: 2px solid var(--black);
+  font-family: 'Halant', serif;
   font-size: 2em;
   margin: 8px 0;
   padding: 4px 0;
 }
 
 h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Halant', serif;
   font-size: 1.2em;
   margin: 0;
 }
@@ -65,17 +64,21 @@ table {
 }
 
 tbody tr:nth-child(odd) {
-  background-color: var(--primary-light);
+  background-color: var(--light);
   transition: 0.2s;
 }
 tbody tr:nth-child(even) {
-  background-color: var(--primary-lighter);
+  background-color: var(--white);
   transition: 0.2s;
 }
 
 td {
   padding: 8px;
   border: 2px solid var(--white);
+}
+
+th {
+  font-weight: 700;
 }
 
 .schedule-container {
@@ -110,7 +113,7 @@ td {
 
 .assignment-wr {
   background-color: var(--white);
-  border: 2px solid var(--primary);
+  border: 2px solid var(--border);
   border-radius: 12px;
   display: inline-block;
   margin: 4px 0;
@@ -139,7 +142,7 @@ td {
 }
 
 .dropdown-container {
-  background-color: var(--primary);
+  background-color: var(--white);
   box-shadow: 2px 4px 8px rgba(0,0,0,0.2);
   display: none;
   overflow: hidden;
@@ -164,7 +167,7 @@ td {
 }
 
 .menu-container .bar {
-  background-color: var(--white);
+  background-color: var(--black);
   border-radius: 4px;
   margin: 4px 0;
   height: 4px;
@@ -196,14 +199,14 @@ td {
 .nav-hr-link,
 .nav-hr-link:visited {
   align-items: center;
-  color: inherit;
+  color: var(--black);
   cursor: pointer;
   display: flex;
   text-decoration: none;
 }
 
 .nav-hr-link:hover {
-  color: var(--primary-lighter);
+  opacity: 0.4;
 }
 
 .nav-items {
@@ -212,7 +215,7 @@ td {
 
 .nav-link,
 .nav-link:visited {
-  color: var(--white);
+  color: var(--black);
   cursor: pointer;
   text-decoration: none;
   -webkit-transition: 0.2s;
@@ -234,15 +237,18 @@ td {
   text-align: center;
 }
 
+.nav-drop:hover {
+  background-color: var(--light);
+}
+
 .nav-link:not(.active):hover  {
-  background-color: var(--white);
-  color: var(--primary);
+  opacity:0.4;
 }
 
 .nav-wr {
   align-items: center;
-  background-color: var(--primary);
-  box-shadow: 1px 2px 8px rgba(0,0,0,0.2);
+  background-color: var(--white);
+  box-shadow: 1px 2px 6px rgba(0,0,0,0.2);
   color: var(--white);
   display: flex;
   justify-content: center;
@@ -274,22 +280,22 @@ td {
 
 .resource-item,
 .resource-item:visited {
-  color: var(--primary);
+  color: var(--black);
   cursor: pointer;
-  text-decoration: none;
+  opacity: 0.8;
+  text-decoration: underline;
 }
 
 .resource-item:hover {
-  color: var(--primary-light);
+  opacity: 0.4;
   text-decoration: underline;
 }
 
 .section-hr {
-  color: var(--header-color);
+  color: var(--black);
 }
 
 .sub-header {
-  color: var(--primary);
   display: flex;
   list-style: none;
   margin: 4px 0;
@@ -302,7 +308,7 @@ td {
 
 @media (max-width: 875px) {
   .schedule-container {
-    border: 2px solid var(--primary-lighter);
+    border: 2px solid var(--border);
     border-radius: 4px;
     margin-top: 1em;
     overflow-y: hidden;
